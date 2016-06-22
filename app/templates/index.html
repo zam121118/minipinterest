@@ -1,0 +1,25 @@
+<!-- comment all of this, to test the function Jinja2 extends
+<html>
+  <head>
+    {% if title %}   ##Jinja2 templates offer control sentence
+    <title>{{title}} - microblog</title>
+    {% else %}
+    <title>Welcome to microblog</title>
+    {% endif %}
+  </head>
+  <body>
+      <h1>Hello, {{user.nickname}}!</h1>
+      {% for post in posts%}   ##add a  loop
+      <p>{{post.author.nickname}} says: <b>{{post.body}}</b></p>
+      {% endfor %}
+  </body>
+</html>
+-->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Hello,{{user.nickname}}!</h1>
+{% for post in posts %}
+<p>{{post.author.nickname}} says: <b>{{post.body}}</b></p>
+{% endfor %}
+{% endblock %}

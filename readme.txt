@@ -4,3 +4,5 @@ Now I want to use git to control my every version.
 
 6-22 test status
 test rollback 
+6-23 not coding
+6-24 create a new branch named dev
